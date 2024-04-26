@@ -1,3 +1,5 @@
+import 'dart:ffi';
+
 import 'package:firebase_database/firebase_database.dart';
 
 class ProductService {
@@ -22,7 +24,7 @@ class ProductService {
 
   void addProductItem(String itemCode, String itemName, String itemDesc) {
     _database.push().set({
-      'product_kode': itemCode,
+      'product_code': itemCode,
       'product_name': itemName,
       'product_desc': itemDesc,
     });
